@@ -24,4 +24,4 @@ function solution() {
 }
 
 console.log(solution());
-q;
+
