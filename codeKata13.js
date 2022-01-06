@@ -20,7 +20,7 @@
 // Output: 7
 // 설명: 1→3→1→1→1 의 합이 제일 작음
 
-const minPathSum = (grid) => {
+const minPathSum = grid => {
   for (let i = 1; i < grid.length; i++) {
     grid[i][0] += grid[i - 1][0];
   }
@@ -31,7 +31,6 @@ const minPathSum = (grid) => {
 
   for (let i = 1; i < grid.length; i++) {
     for (let j = 1; j < grid[0].length; j++) {
-      //위쪽이나 왼쪽에서, 더 작은걸로 더해준다.
       grid[i][j] += Math.min(grid[i - 1][j], grid[i][j - 1]);
     }
   }
